@@ -1,0 +1,18 @@
+---------------------
+ CREDITS
+---------------------
+
+- Bootstrap 4  -  https://getbootstrap.com
+
+- Lightbox2    -  https://lokeshdhakar.com/projects/lightbox2/
+	
+- Leaflet      -  https://leafletjs.com
+
+ 
+
+---------------------
+ LOGOs
+---------------------
+
+- Freepik     - https://www.freepik.com/free-vector/modern-logotype-collection_1718068.htm
+			  - https://www.freepik.com/free-vector/elegant-business-logos_714464.htm
