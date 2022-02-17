@@ -1,20 +1,10 @@
 <?php
 
-
-
-
-// require('../vendor/phpmailer_files-main/smtp/PHPMailerAutoload.php');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-//Load Composer's autoloader
 require 'vendor/autoload.php';
-// $fName = $_POST['fName'];
-// $lName = $_POST['lName'];
-// $email = $_POST['email'];
-// $message = $_POST['message'];
-// $fullName = $fName . " " . $lName;
 
 
 $mail = new PHPMailer(true);
@@ -26,6 +16,7 @@ try {
     $email = $_POST['email'];
     $message = $_POST['message'];
     $fullName = $fName . " " . $lName;
+
 
 
     //Server settings
@@ -45,21 +36,12 @@ try {
     $mail->addReplyTo($email, $fullName);
     $mail->addBCC($email);
 
-
-    // //Attachments
-    // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
-
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Sent from ' . $email;
-    $mail->Body    = $message;
-    // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    // $mail->Body    = $message;
+    $mail ->Body ="First Name: " . $fName . "<br>" . "Last Name: " . $lName . "<br>" . "Email: " . $email . "<br>" . "Message: " . $message . "<br>";
 
-    // $mail->send(){
-    //     $status = "success"
-    //     $response = "Email is sent!";
-    // };
     if($mail->send()){
         $status = "success";
         $response = "Email is sent!";
