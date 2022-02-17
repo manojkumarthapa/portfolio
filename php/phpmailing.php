@@ -31,17 +31,19 @@ try {
     //Server settings
     // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->Host       = 'mail.privateemail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'manojthapaportfolio@gmail.com';                     //SMTP username
-    $mail->Password   = 'manojmanoj';                               //SMTP password
+    $mail->Username   = 'manojkumarthapa@manojdb.com';                     //SMTP username
+    $mail->Password   = 'namecheap';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('manojthapaportfolio@gmail.com', $fullName);
+    $mail->setFrom('manojkumarthapa@manojdb.com', $fullName);
+    $mail->addAddress('manojkumarthapa@manojdb.com'); 
     $mail->addAddress('manojthapaportfolio@gmail.com');     //Add a recipient
-    $mail->addAddress('manojkumarthapa@manojdb.com');              //Name is optional
+    $mail->addReplyTo($email, $fullName);
+    $mail->addBCC($email);
 
 
     // //Attachments
@@ -50,8 +52,9 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'Sent from ' . $email;
     $mail->Body    = $message;
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     // $mail->send(){
     //     $status = "success"

@@ -1,3 +1,14 @@
+console.log('jpt');
+
+$(window).on('load', function () {
+  if ($('#preloader').length) {
+    $('#preloader').delay(1000).fadeOut('slow', function () {
+      $(this).remove();
+    });
+  }
+});
+
+
 
 
 $('.msg-send').click(function(){
@@ -21,7 +32,6 @@ $('.msg-send').click(function(){
                 'message' : message
             },
             success: function(item){
-
                 if(item == 'Message has been sent'){
                     $('.fname').val('');
                     $('.lname').val('');
@@ -38,7 +48,7 @@ $('.msg-send').click(function(){
                     Swal.fire({
                         position: 'center',
                         icon: 'error',
-                        title: `${returned.resonse}`,
+                        title: `Oops`,
                         showConfirmButton: false,
                         timer: 5000
                     })
