@@ -62,6 +62,7 @@ body {
   z-index: 200;
   padding-left: 14vw;
   padding-right: 14vw;
+  min-height: 6vh;
 }
 .navbar a {
   color: #ffffff !important;
@@ -71,9 +72,32 @@ body {
 }
 
 .navbar-toggler {
-  content: "-";
-  color: red;
-  background-color: #f2f2f2;
+  width: 55px;
+  height: 50px;
+  text-align: center;
+  display: block;
+}
+
+.navbar-toggler-icon,
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.navbar-toggler-icon::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  content: "";
+  margin-top: 8px;
 }
 
 /* .navbar-toggler-icon {
