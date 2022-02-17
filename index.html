@@ -21,7 +21,7 @@
   <!-- Custom stylesheet - for your changes-->
   <link rel="stylesheet" href="css/custom.css">
   <!-- Favicon-->
-  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="shortcut icon" href="img/favicon.ico">
   <!-- Font-Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -33,8 +33,35 @@
 
 <body>
   <div id="preloader"></div>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#hero-sect">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#works-sect">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#abt-sect">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-sect">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+  </header>
   <!-- Hero Section-->
-  <section class="py-5">
+  <section class="py-5" id="hero-sect">
     <div class="container py-5">
       <div class="row">
         <div class="col-lg-12">
@@ -42,7 +69,7 @@
               Thapa. <br> </span><span class="text-op">I am passionate about web development.</span></h1>
           <!-- <a class="touch-btn" href="mailto:genjithapa182@hotmail.com">Get in touch</a> -->
           <div class="view-links">
-            <!-- <div class="download-cv"><a href="\">Download CV</a></div> -->
+            <div class="download-cv"><a href="Resume-Manoj-Thapa.pdf" target="_blank">Download CV</a></div>
             <div class="github"><a href="https://github.com/manojkumarthapa" target="_blank">View Github</a></div>
           </div>
         </div>
@@ -50,7 +77,7 @@
     </div>
   </section>
   <!-- Works Section-->
-  <section class="pt-5">
+  <section class="pt-5" id="works-sect">
     <div class="container">
       <h2 class="secondary-heading h1 text-lg lined">Selected works</h2>
       <p class="lead mb-5">Here are a list of projects I've recently completed.</p>
@@ -63,10 +90,19 @@
           <a href="https://manojkumarthapa.tech/" target="_blank"><img src="img/gazet.png" alt="Gazetteer"
               id="gazetteer"></a>
           <p><strong>Gazetteer</strong> is a Single Page Page that uses LeafletJS. It also contains APIS for
-            <strong>Currency
-              Conversion, local weather, Covid Statistics, News and WebCam.</strong> Utilizing PHP and Javascript made
-            it
-            possible to have many functionality in a single web page.
+            <strong>Currency Conversion, local weather, Covid Statistics, News and WebCam.</strong> Users navigating
+            to<strong> Gazetteer
+            </strong> will be greeted with a <strong>pre loader</strong> giving the webpage time to load so that the
+            user does not get a weak impression of the webpage. Users have the ability to use their device in-built
+            <strong>Navigation</strong> to locate the country they are in for a quick info. <strong>Html</strong> and
+            <strong>css</strong> were used mainly for the styling of the project. <strong>JavaScript</strong> was used
+            mainly for creating functions and interacting with the user for a smoother <smooth>user experience</smooth>.
+            I did depend on the power of <strong>AJAX</strong> for this to be possible, ensuring proper <strong>event
+              loop</strong> sequences. <strong>Php</strong> was used mainly for handling <strong>API</strong> request
+            which returned the accurate information from the API in a timely manner. The data returned from the API in
+            <strong>PHP</strong> was then passed on to the calling <strong>Javascript AJAX</strong> and finally
+            Javascript was able to display the data to <strong>HTML</strong> using <strong>JQUERY</strong> or futher
+            pass the data to another <strong>AJAX</strong> function.
           </p>
           <p class="visit">Visit <a href="https://manojkumarthapa.tech/" target="_blank"><strong>HERE</strong></a></p>
         </div>
@@ -75,7 +111,23 @@
           <a href="https://manojdb.com/" target="_blank"><img src="img/company.gif" alt="Company" id="company"></a>
           <p><strong>Company Directory</strong> is a Single Page Page that showscase a popluar functionality of any
             Company.
-            It displays the <strong>Employees, Departments and Branches</strong> of a company.</p>
+            It displays the <strong>Employees, Departments and Branches</strong> of a company.</p> <strong>Company
+            Directory</strong> resolves around the idea of <strong>CRUD</strong>, giving the user the ability to either
+          <strong>create, edit, update and delete</strong> data from the <strong>DataBase</strong> without the need for
+          <strong>SQL</strong> knowledge. <strong>Company Directory</strong> is designed to be <strong>easy for
+            all</strong> range of users to navigate and interact. <strong>Users</strong> are first greeted with
+          <strong>pre-loader</strong> for a <strong>smooth user experience</strong>. I tried to imimate the look and
+          feel of a phone contact that all users are sure to be familiar with. <strong>HTML and CSS</strong> are used
+          mainly for the styling of <strong>Company Directory</strong>. <strong>Font-awesome</strong> CDN is utilized
+          for their free <strong>icons</strong>. Details are arranged <strong>Alphabetically</strong> based on their
+          first name. Every button that <strong>users</strong> click is greeted with a beautiful popup. <strong>Sweet
+            Alert</strong> is used instead of the conventional popups/alert for its<strong> versatile</strong>
+          appearance and ability. Either creating, reading, updating or deleting, <strong>Javascript </strong>is run in
+          the background to use the power of <strong>AJAX</strong> to interact with events
+          <strong>asynchronously.</strong> <strong>PHP</strong> is used to write <strong>query to MYSql
+            DATABASE</strong>, updating the data in database right from the browser. To ensure that datas that have
+          dependency are not deleted, I have added a script that checks for dependency. <strong>Users</strong> are able
+          to see the changes that they have made easily.
           <br>
           <p class="visit">Visit <a href="https://manojdb.com/" target="_blank"><strong>HERE</strong></a></p>
         </div>
@@ -83,7 +135,7 @@
     </div>
   </section>
   <!-- About Section-->
-  <section class="py-5">
+  <section class="py-5" id="abt-sect">
     <div class="container py-5">
       <h2 class="secondary-heading text-lg lined">About me</h2>
       <div class="row">
@@ -106,53 +158,34 @@
             <strong>SEO</strong>, <strong>DataBase</strong> and <strong>Web Accessability</strong>.
           </p>
           <br><br><br>
-          <div class="py-2 mb-2">
-            <p class="small font-weight-bold text-muted text-uppercase mb-0">PHP</p>
-            <div class="progress">
-              <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"
-                class="progress-bar progress-primary-1"></div>
+          <h4>Languages and Framework I use regularly</h4>
+          <div id="tech-logo">
+            <div class="py-2 mb-2">
+              <img src="img/tech-img/html.png" alt="HTML logo" class="tech-img">
             </div>
-          </div>
-          <div class="py-2 mb-2">
-            <p class="small font-weight-bold text-muted text-uppercase mb-0">Javascript</p>
-            <div class="progress">
-              <div role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"
-                class="progress-bar progress-primary-2"></div>
+            <div class="py-2 mb-2">
+              <img src="img/tech-img/css.png" alt="CSS logo" class="tech-img">
             </div>
-          </div>
-          <div class="py-2 mb-2">
-            <p class="small font-weight-bold text-muted text-uppercase mb-0">HTML Coding</p>
-            <div class="progress">
-              <div role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"
-                class="progress-bar progress-primary-3"></div>
+            <div class="py-2 mb-2">
+              <img src="img/tech-img/bootstrap.png" alt="Bootstrap logo" class="tech-img">
             </div>
-          </div>
-          <div class="py-2 mb-2">
-            <p class="small font-weight-bold text-muted text-uppercase mb-0">WordPress</p>
-            <div class="progress">
-              <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"
-                class="progress-bar progress-primary-4"></div>
+            <div class="py-2 mb-2">
+              <img src="img/tech-img/php.svg" alt="PHP logo" class="tech-img">
             </div>
-          </div>
-          <div class="py-2 mb-2">
-            <p class="small font-weight-bold text-muted text-uppercase mb-0">Bootstrap</p>
-            <div class="progress">
-              <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"
-                class="progress-bar progress-primary-5"></div>
+            <div class="py-2 mb-2">
+              <img src="img/tech-img/python.jpg" alt="Python logo" class="tech-img">
             </div>
-          </div>
-          <div class="py-2 mb-2">
-            <p class="small font-weight-bold text-muted text-uppercase mb-0">Jquery</p>
-            <div class="progress">
-              <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"
-                class="progress-bar progress-primary-5"></div>
+            <div class="py-2 mb-2">
+              <img src="img/tech-img/js.png" alt="JavaScript logo" class="tech-img">
             </div>
-          </div>
-          <div class="py-2 mb-2">
-            <p class="small font-weight-bold text-muted text-uppercase mb-0">Node.JS</p>
-            <div class="progress">
-              <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"
-                class="progress-bar progress-primary-5"></div>
+            <div class="py-2 mb-2">
+              <img src="img/tech-img/jquery.png" alt="Jquery logo" class="tech-img">
+            </div>
+            <div class="py-2 mb-2">
+              <img src="img/tech-img/nodejs.jpg" alt="NodeJS logo" class="tech-img">
+            </div>
+            <div class="py-2 mb-2">
+              <img src="img/tech-img/github.jpg" alt="GitHub logo" class="tech-img">
             </div>
           </div>
         </div>
@@ -160,7 +193,7 @@
     </div>
   </section>
   <!-- Contact Section-->
-  <section class="py-5 contact">
+  <section class="py-5 contact" id="contact-sect">
     <div class="container py-5">
       <h2 class="secondary-heading h1 text-lg lined mb-5">Contact</h2>
       <div class="row">
@@ -169,23 +202,19 @@
             <div class="row">
               <div class="form-group col-lg-6">
                 <label for="name" class="font-weight-normal">Your firstname *</label>
-                <input id="name" type="text" name="name" placeholder="Enter your firstname" required
-                  class="form-control fname">
+                <input id="name" type="text" name="name" required class="form-control fname">
               </div>
               <div class="form-group col-lg-6">
                 <label for="surname" class="font-weight-normal">Your lastname *</label>
-                <input id="surname" type="text" name="surname" placeholder="Enter your lastname" required
-                  class="form-control lname">
+                <input id="surname" type="text" name="surname" required class="form-control lname">
               </div>
               <div class="form-group col-lg-12">
                 <label for="email" class="font-weight-normal">Your email *</label>
-                <input id="email" type="email" name="email" placeholder="Enter your email" required id="email"
-                  class="form-control">
+                <input id="email" type="email" name="email" required id="email" class="form-control">
               </div>
               <div class="form-group col-lg-12">
                 <label for="message" class="font-weight-normal">Your message for us *</label>
-                <textarea id="message" rows="4" name="message" placeholder="Enter your message" required id="message"
-                  class="form-control"></textarea>
+                <textarea id="message" rows="4" name="message" required id="message" class="form-control"></textarea>
               </div>
               <div class="form-group col-lg-12">
                 <button type="submit" class="btn btn-outline-primary btn-block msg-send">Send message</button>

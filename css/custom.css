@@ -1,8 +1,13 @@
-/* your styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: #0b1a2e;
   color: #8893af;
+  position: relative;
 }
 
 #preloader {
@@ -49,6 +54,35 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  background-color: #68a2ee;
+  width: 100vw;
+  position: fixed;
+  z-index: 200;
+  padding-left: 14vw;
+  padding-right: 14vw;
+}
+.navbar a {
+  color: #ffffff !important;
+  font-weight: bold;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.6em;
+}
+
+.navbar-toggler {
+  content: "-";
+  color: red;
+  background-color: #f2f2f2;
+}
+
+/* .navbar-toggler-icon {
+  background-color: #f2f2f2;
+} */
+
+/* .navbar-expand-lg:first-child {
+  padding-left: 14vw;
+} */
 
 p {
   color: hsl(223, 28%, 80%);
@@ -220,4 +254,25 @@ footer {
 }
 .view-links .download-cv {
   margin-right: 25px;
+}
+h4 {
+  color: #efefef;
+}
+
+#tech-logo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#tech-logo > div {
+  width: 60px;
+  height: 100px;
+  align-items: center;
+}
+
+.tech-img {
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: cover;
 }
