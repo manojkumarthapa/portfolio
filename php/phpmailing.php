@@ -31,8 +31,8 @@ try {
 
     //Recipients
     $mail->setFrom('manojkumarthapa@manojdb.com', $fullName);
-    $mail->addAddress('manojkumarthapa@manojdb.com'); 
-    $mail->addAddress('manojthapaportfolio@gmail.com');     //Add a recipient
+    $mail->addAddress('manojkumarthapa@manojdb.com', 'no-reply@manojdb.com'); 
+    $mail->addAddress('manojthapaportfolio@gmail.com', 'no-reply@gmail.com');     //Add a recipient
     $mail->addReplyTo($email, $fullName);
     $mail->addBCC($email);
 
